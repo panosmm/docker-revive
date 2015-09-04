@@ -17,5 +17,8 @@ ENV APACHE_LOG_DIR /var/log/apache2
 
 EXPOSE 80
 
+ADD run.sh /run.sh
+ADD site.conf.php /site.conf.php
+
 CMD [/run.sh]
 CMD ["/usr/sbin/apache2", "-D",  "FOREGROUND"]
