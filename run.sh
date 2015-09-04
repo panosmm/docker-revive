@@ -19,4 +19,4 @@ fi
 cp -ar /var/www/timber/www/images/ /config/www/images/
 
 # Add msmtp config file with variable replacement
-cat /tmp/msmtprc| sed s/EMAIL/${EMAIL}/g | sed s/SMTP_SERVER/${SMTP_SERVER}/g > /etc/msmtprc
+# cat /tmp/msmtprc| sed s/EMAIL/${EMAIL}/g | sed s/SMTP_SERVER/${SMTP_SERVER}/g > /etc/msmtprc
