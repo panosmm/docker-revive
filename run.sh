@@ -1,6 +1,6 @@
 #!/bin/bash -le
 
-# If the site confir file does not exist, create and symlink it.
+# If the site config file does not exist, create and symlink it.
 if [ ! -f /config/${SITE}.conf.php ] ; then
 	cp /site.conf.php /config/${SITE}.conf.php
 	sed -i s/'SITE'/${SITE}/ /config/${SITE}.conf.php
@@ -8,6 +8,7 @@ if [ ! -f /config/${SITE}.conf.php ] ; then
 	sed -i s/'USERNAME'/${USERNAME}/ /config/${SITE}.conf.php
 	chown www-data /config/${SITE}.conf.php
 fi
+chmod -R a+w /var/www/timber/var
 ln -sf /config/${SITE}.conf.php /var/www/timber/var/${SITE}.conf.php
 
 # Create the banner storage directory and ensure it is owned by www-data
