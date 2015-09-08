@@ -23,6 +23,10 @@ cp -ar /var/www/timber/www/images/ /config/www/images/
 # cat /tmp/msmtprc| sed s/EMAIL/${EMAIL}/g | sed s/SMTP_SERVER/${SMTP_SERVER}/g > /etc/msmtprc
 
 # Start Apache
+
+/usr/sbin/apache2 -D FOREGROUND
+
+<<COMMENT1
 /etc/init.d/apache2 start
 touch /tmp/last-reload
 #Trap SIGHUP to reload Apache
@@ -41,3 +45,4 @@ do
 done
 
 echo "Apache heartbeat did not succeed. Exiting...."
+COMMENT1
