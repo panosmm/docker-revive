@@ -25,7 +25,7 @@ zoneLinkingStatistics=1
 disableDirectSelection=1
 
 [database]
-type=mysql
+type=pgsql
 host=SITE
 socket="/var/run/mysqld/mysqld.sock"
 port=3306
@@ -33,7 +33,7 @@ username=USERNAME
 password=PASSWORD
 name=revivedb
 persistent=
-mysql4_compatibility=1
+mysql4_compatibility=
 protocol=tcp
 compress=
 ssl=
