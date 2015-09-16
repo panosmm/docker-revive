@@ -173,7 +173,7 @@ defaultDaysIntervalThreshold=30
 
 [table]
 prefix=rv_
-type=MYISAM
+type=
 account_preference_assoc=account_preference_assoc
 account_user_assoc=account_user_assoc
 account_user_permission_assoc=account_user_permission_assoc
