@@ -28,7 +28,7 @@ disableDirectSelection=1
 type=pgsql
 host=SITE
 socket="/var/run/mysqld/mysqld.sock"
-port=3306
+port=5432
 username=USERNAME
 password=PASSWORD
 name=revive_db
@@ -173,7 +173,7 @@ defaultDaysIntervalThreshold=30
 
 [table]
 prefix=rv_
-type=
+type=MYISAM
 account_preference_assoc=account_preference_assoc
 account_user_assoc=account_user_assoc
 account_user_permission_assoc=account_user_permission_assoc
