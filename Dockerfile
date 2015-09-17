@@ -21,4 +21,5 @@ ADD run.sh /run.sh
 ADD site.conf.php /site.conf.php
 
 CMD ["/run.sh"]
+
 # CMD ["/usr/sbin/apache2", "-D",  "FOREGROUND"]
