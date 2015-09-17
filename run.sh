@@ -11,6 +11,7 @@ fi
 chmod -R a+w /var/www/timber/var
 ln -sf /config/${SITE}.conf.php /var/www/timber/var/${SITE}.conf.php
 
+<<COMMENT1
 # Create the banner storage directory and ensure it is owned by www-data
 if [ ! -d /config/www/images/ ] ; then
 	mkdir -p /config/www/images
@@ -21,12 +22,12 @@ cp -ar /var/www/timber/www/images/ /config/www/images/
 
 # Add msmtp config file with variable replacement
 # cat /tmp/msmtprc| sed s/EMAIL/${EMAIL}/g | sed s/SMTP_SERVER/${SMTP_SERVER}/g > /etc/msmtprc
+COMMENT1
 
 # Start Apache
-
 /usr/sbin/apache2 -D FOREGROUND
 
-<<COMMENT1
+<<COMMENT2
 /etc/init.d/apache2 start
 touch /tmp/last-reload
 #Trap SIGHUP to reload Apache
@@ -45,4 +46,4 @@ do
 done
 
 echo "Apache heartbeat did not succeed. Exiting...."
-COMMENT1
+COMMENT2
